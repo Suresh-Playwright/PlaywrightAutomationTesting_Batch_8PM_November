@@ -1,0 +1,210 @@
+What is TypeScript ?
+
+Have you heard about JavaScript ?
+
+JavaScript is a programming language used to develop interactive web application
+We can use JavaScript for forntend development , backend development , and automation
+testing.
+
+But In JavaScript has one limitation . It is dynamically Typed .
+
+What does dynamically typed mean ?
+
+It means JavaScript does not required us to explicitly declare the datatype of a variable.
+
+
+let employeeName= "Suresh";
+employeeName= 100;
+console.log(employeeName);
+
+JavaScript allows us to assign a number to a  variable that previously contained a string.
+
+Now Imagine we are developing a large automation framework with hundered of test cases.
+
+Acciedently assign the wrong data type can create unexpected problems.
+
+This is where TypeScript Comes into the picture.
+
+
+
+TypeScript is a programming language developed by Microsoft. It is a superset of JavaScript that adds
+ static typing and other development features.
+
+
+let employeeName: string= "Suresh";
+employeeName= 100; 
+
+// Type 'number' is not assignable to type string
+console.log(employeeName);
+
+Interview Questions:
+--------------------
+1. What is TypeScript ?
+2. Who developed TypeScript ?
+3. Is TypeScript a superset of JavaScript ?
+4. Why do we use TypeScript ?
+5. Does TypeScript execute directly in the browser ?
+
+Browsers do not execute TypeScript directly. Typescript is generally
+transpilled into JavaScript before execution.
+
+
+
+Variables In TypeScript :
+-------------------------
+
+A variable is a container used to store a data in a program.
+
+For example , Imagine you want to store a student's name , age , salary , and marks, We use
+Variables to store these values.
+
+let studentName1 : string = "Suresh";
+let age : number = 27;
+let salary : number = 85000;
+let isTrainer : boolean = true;
+
+console.log(studentName1)
+console.log(age)
+console.log(salary)
+console.log(isTrainer)
+
+
+
+Types of Variables Declarations In TypeScript:
+------------------------------------------------
+
+
+1. var -- Function Scoped
+2. let - Block Scoped
+3. const - Block Scoped
+
+
+Var : 
+
+1. We can declare a variable usng var.
+2. We can reassign its value
+3. We can redeclare it in the same Scope
+4. It is Function scoped not block scoped.
+
+var employeeName : string = "Suresh";
+
+console.log(employeeName)
+
+employeeName= "Rahul";
+console.log(employeeName)
+
+
+let :
+
+1. We can declare a variable using let.
+2. We can re-assign values
+3. We cannot redeclare in the same scoped
+4. It is block scoped
+
+
+let empName : string = "Suresh";
+
+
+
+console.log(empName)
+
+empName="Rahul";
+
+console.log(empName)
+
+
+
+const :
+
+1. We declare constants using const.
+2. We cannot reassign the variable
+3. We cannot redeclare it in the same scope
+4. It is block scope
+5. It must be intilized during Declarations
+
+file:///H:/Playwright_GenAI/Playwright_07_40%20PM/const.ts:5
+companyName= "CBA"
+           ^
+
+TypeError: Assignment to constant variable.
+    at Object.<anonymous> (file:///H:/Playwright_GenAI/Playwright_07_40%20PM/const.ts:5:12)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.21.0
+
+
+
+
+
+Variables Data Types with Examples:
+------------------------------------
+
+1. String :  Used to store text
+
+let firstName : string = "Suresh"
+console.log(firstName)
+
+2. number -  Used to store integer and decimal values.
+
+let age : number = 27
+let percentage : number =85.87;
+console.log(percentage)
+
+console.log(age)
+
+
+3. boolean ; Used to store true or false
+
+let isActive : boolean = true;
+let isCompleted : boolean = false;
+
+
+4. Array - Used to store multiple values
+let strudents: string[] =["Suresh","Rahul","Kiran"];
+
+let marks :number[]=[80,90,78]
+
+
+5. Unknown : Can store any type of value , but requires type checking  before using
+it as a sepecific type.
+
+let value : Unknown ="Suresh";
+
+if(typeof value==="String")
+{
+  console.log(value.topUpperCase());
+
+}
+
+
+6. Object - Used to store multiple properties
+
+let employee :{name : string , age :number , salary :number}=
+{
+    name : "Suresh",
+    age : 27
+    salary:40000
+
+
+
+}
+
+
+7. Any - Can store different data type values.
+
+let data : any ="Suresh"
+
+data=1000
+
+data = true;
+
+data = "12/06/1998"
+
+
+
